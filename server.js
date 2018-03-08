@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
 
 app.get('/search/:query', (req, res) => {
   const hashTag = req.params.query;
-  res.send('success ');
+  console.log(hashTag, req.params);
+  res.send('success ' + hashTag);
 });
 
 app.listen(3000, console.log('hello world'));

@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "express": "^4.16.2",
     "nodemon": "^1.17.1",
