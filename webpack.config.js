@@ -1,21 +1,22 @@
+var path = require('path');
+
 module.exports = {
   entry: './lib/entry.js',
   output: {
-    filename: '../lib/bundle.js'
+    path: path.resolve(__dirname, 'lib'),
+    filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      {
-        test: [/\.js?$/],
-        loader: 'babel-loader',
-        query: {
-          presets: ['env'],
+    rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: "babel-loader"
         }
-      }
-    ]
+      ]
   },
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx', '*'],
   },
 };

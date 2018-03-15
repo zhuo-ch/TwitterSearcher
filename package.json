@@ -2,16 +2,22 @@
   "name": "twitter_sercher",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
+  "engines": {
+    "node": "7.9.0",
+    "npm": "4.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack -w",
-    "nodemon": "nodemon server.js"
+    "webpack": "webpack --watch",
+    "nodemon": "nodemon server.js",
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "express": "^4.16.2",
