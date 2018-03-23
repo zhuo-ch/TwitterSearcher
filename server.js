@@ -8,7 +8,7 @@ app.use(express.static(`${__dirname}/lib`));
 app.get('/search/:query', (req, res) => {
   const hashTag = req.params.query;
   console.log(hashTag);
-  res.send('sa');
+  res.json({ result: hashTag });
 });
 
 app.listen(8000, console.log('hello world'));
